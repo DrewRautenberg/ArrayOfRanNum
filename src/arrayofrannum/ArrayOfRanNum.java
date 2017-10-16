@@ -67,7 +67,7 @@ public class ArrayOfRanNum {
                 }
             }
             for (int k = 0; k < n; k++) {
-                if (gpa[i] < tempMin) {
+                if (gpa[k] < tempMin) {
                     tempMin = gpa[k];
                 }
             }
