@@ -30,15 +30,15 @@ public class ArrayOfRanNum {
 
     public static void main(String[] args) {
 
-        //----------------------------------------------------- GET N FROM USER
+        //GET N FROM USER
         // NOTE:  Need to find N BEFORE declaring array
         int n = Integer.parseInt(JOptionPane.showInputDialog(
                 "Enter number of gpa's to generate (like 50)"));
-        //-------------------------------------------------------- DECLARATIONS
+        //DECLARATIONS
         Random r = new Random(1903);            // use a SEED so multiple runs
         // give the same set of numbers
 
-        // TO DO:  declare array storage for n random numbers
+        // TODO:  declare array storage for n random numbers
 
 
         double total = 0;
@@ -47,13 +47,13 @@ public class ArrayOfRanNum {
         int[] counter = new int[7];
         for(int i = 0; i < counter.length; i++)
             counter[i] = 0;
-        //----------------------------------------------- FILL ARRAY WITH GPA'S
+        //FILL ARRAY WITH GPA'S
 
         // TO DO
 
 
 
-        //---------------------------------------------------------- FIND STATS
+        //FIND STATS
         // HINT:  List all the steps you need to do with ONE ARRAY ELEMENT.
         //          Then put that code inside a loop.
         // QUESTION:  What's the appropriate type of loop to use?
@@ -69,11 +69,10 @@ public class ArrayOfRanNum {
 
 
 
-        //----------------------------------------------------------- FINISH UP
+        //FINISH UP
         printReport(total, n, tempMax, tempMin, counter);
         System.exit(0);
     }
-    //*************************************************************************
     private static int decideIndex() {                       // NEEDS PARAMETER
         int index = 0;
 
@@ -82,7 +81,6 @@ public class ArrayOfRanNum {
 
         return index;
     }
-    //*************************************************************************
     private static void printReport(double total, int n, double tempMax,
                                     double tempMin, int[] counter)      {
 
