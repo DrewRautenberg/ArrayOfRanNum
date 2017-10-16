@@ -48,7 +48,7 @@ public class ArrayOfRanNum {
         //FILL ARRAY WITH GPA'S
 
         for (int i = 0; i < n; i++) {
-            gpa[i] = r.nextDouble() * 10;
+            gpa[i] = r.nextDouble()* 4;
         }
 
         //FIND STATS
