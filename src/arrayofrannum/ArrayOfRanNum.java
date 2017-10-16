@@ -37,9 +37,7 @@ public class ArrayOfRanNum {
         //DECLARATIONS
         Random r = new Random(1903);            // use a SEED so multiple runs
         // give the same set of numbers
-
-        // TODO:  declare array storage for n random numbers
-
+        int[] random = new int[n];
 
         double total = 0;
         double tempMax = 0.0;
@@ -49,7 +47,9 @@ public class ArrayOfRanNum {
             counter[i] = 0;
         //FILL ARRAY WITH GPA'S
 
-        // TO DO
+        for (int i=0;i<n;i++){
+            random[i]=r.nextInt();
+        }
 
 
 
@@ -60,7 +60,7 @@ public class ArrayOfRanNum {
         //      - a while or for loop?
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        // TO DO
+
 
 
 
