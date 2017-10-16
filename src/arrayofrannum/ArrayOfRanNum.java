@@ -37,7 +37,7 @@ public class ArrayOfRanNum {
         //DECLARATIONS
         Random r = new Random();            // use a SEED so multiple runs
         // give the same set of numbers
-        int[] gpa = new int[n];
+        double[] gpa = new double[n];
 
         double total = 0;
         double tempMax = 0.0;
@@ -48,7 +48,7 @@ public class ArrayOfRanNum {
         //FILL ARRAY WITH GPA'S
 
         for (int i = 0; i < n; i++) {
-            gpa[i] = r.nextInt(4);
+            gpa[i] = r.nextDouble() * 10;
         }
 
         //FIND STATS
