@@ -35,7 +35,7 @@ public class ArrayOfRanNum {
         int n = Integer.parseInt(JOptionPane.showInputDialog(
                 "Enter number of gpa's to generate (like 50)"));
         //DECLARATIONS
-        Random r = new Random(1903);            // use a SEED so multiple runs
+        Random r = new Random(1976);            // use a SEED so multiple runs
         // give the same set of numbers
         int[] gpa = new int[n];
 
@@ -48,7 +48,7 @@ public class ArrayOfRanNum {
         //FILL ARRAY WITH GPA'S
 
         for (int i=0;i<n;i++){
-            gpa[i]=r.nextInt();
+            gpa[i]=r.nextInt(4);
         }
 
         //FIND STATS
@@ -73,9 +73,29 @@ public class ArrayOfRanNum {
             }
         }
 
-
-
-
+        for (int i=0;i<n;i++){
+            if (gpa[i]>=3.5){
+                counter[0] +=1;
+            }
+            else if (gpa[i]<3.5 && gpa[i]>=3){
+                counter[1] +=1;
+            }
+            else if (gpa[i]<3 && gpa[i]>=2.5){
+                counter[2] +=1;
+            }
+            else if (gpa[i]<2.5 && gpa[i]>=2){
+                counter[3] +=1;
+            }
+            else if (gpa[i]<2 && gpa[i]>=1.5){
+                counter[4] +=1;
+            }
+            else if (gpa[i]<1.5 && gpa[i]>=1){
+                counter[5] +=1;
+            }
+            else {
+                counter[6]+=1;
+            }
+        }
 
 
         //FINISH UP
@@ -85,7 +105,7 @@ public class ArrayOfRanNum {
     private static int decideIndex() {                       // NEEDS PARAMETER
         int index = 0;
 
-        // TO DO
+        // no clue how this should be used
 
 
         return index;
@@ -99,12 +119,14 @@ public class ArrayOfRanNum {
                 "2.0 to < 2.5",
                 "1.5 to < 2.0",
                 "1.0 to < 1.5",
-                "< 1.0}      "  };
+                "< 1.0       "  };
 
         System.out.printf("\nAverage of %d gpa\'s is %.2f\n\tMax is %.2f, " +
                 "Min is %.2f\n", n, total / n, tempMax, tempMin);
 
-        // TO DO
+        for (int i=0;i<7;i++){
+            System.out.println(label[i]+" "+counter[i]);
+        }
 
 
 
